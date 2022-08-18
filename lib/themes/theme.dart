@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/constants/constants.dart';
 
 final ThemeData lightTheme = ThemeData.light().copyWith(
   primaryColor: Colors.white,
-  scaffoldBackgroundColor: Colors.white,
-  cardColor: Colors.white,
+  scaffoldBackgroundColor: lightBackGroundColor,
+  
   textTheme: const TextTheme(
     bodyText1: TextStyle(
       color: Colors.black,
@@ -49,7 +50,7 @@ final ThemeData lightTheme = ThemeData.light().copyWith(
 
 final darkTheme = ThemeData.dark().copyWith(
   primaryColor: Colors.black,
-  scaffoldBackgroundColor: Colors.black,
+  scaffoldBackgroundColor: darkBackGroundColor,
   cardColor: Colors.black,
   textTheme: const TextTheme(
     bodyText1: TextStyle(

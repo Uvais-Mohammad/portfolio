@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             flex: 3,
             child: Container(
-              color: Colors.green,
+
             ),
           ),
         ],
