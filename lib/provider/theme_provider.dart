@@ -6,7 +6,7 @@ enum ThemeType {
 }
 
 class ThemeProvider extends ChangeNotifier {
-  ThemeType _themeType = ThemeType.light;
+  ThemeType _themeType = ThemeType.dark;
   ThemeType get themeType => _themeType;
   set themeType(ThemeType themeType) {
     _themeType = themeType;
