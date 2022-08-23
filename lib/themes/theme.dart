@@ -3,46 +3,44 @@ import 'package:my_portfolio/constants/constants.dart';
 
 final ThemeData lightTheme = ThemeData.light().copyWith(
   primaryColor: Colors.white,
-  scaffoldBackgroundColor: lightBackGroundColor,
-  
-  textTheme: const TextTheme(
-    bodyText1: TextStyle(
+  scaffoldBackgroundColor: Colors.white,
+  appBarTheme: const AppBarTheme(iconTheme: IconThemeData(color: Colors.black)),
+  textTheme: TextTheme(
+    bodyText1: const TextStyle(
       color: Colors.black,
     ),
-    bodyText2: TextStyle(
+    bodyText2: const TextStyle(
       color: Colors.black,
     ),
-    button: TextStyle(
+    button: const TextStyle(
       color: Colors.black,
     ),
-    headline1: TextStyle(
+    headline1: const TextStyle(
       color: Colors.black,
     ),
-    headline2: TextStyle(
+    headline2: TextStyle(color: Colors.black, fontFamily: font),
+    headline3: const TextStyle(
       color: Colors.black,
     ),
-    headline3: TextStyle(
+    headline4: const TextStyle(
       color: Colors.black,
     ),
-    headline4: TextStyle(
+    headline5: const TextStyle(
       color: Colors.black,
     ),
-    headline5: TextStyle(
+    headline6: const TextStyle(
       color: Colors.black,
     ),
-    headline6: TextStyle(
+    subtitle1: const TextStyle(
       color: Colors.black,
     ),
-    subtitle1: TextStyle(
+    subtitle2: const TextStyle(
       color: Colors.black,
     ),
-    subtitle2: TextStyle(
+    overline: const TextStyle(
       color: Colors.black,
     ),
-    overline: TextStyle(
-      color: Colors.black,
-    ),
-    caption: TextStyle(
+    caption: const TextStyle(
       color: Colors.black,
     ),
   ),
@@ -52,46 +50,42 @@ final darkTheme = ThemeData.dark().copyWith(
   primaryColor: Colors.black,
   scaffoldBackgroundColor: darkBackGroundColor,
   cardColor: Colors.black,
-  textTheme: const TextTheme(
-    bodyText1: TextStyle(
+  listTileTheme: const ListTileThemeData(),
+  textTheme: TextTheme(
+    bodyText1: TextStyle(color: Colors.white, fontFamily: font),
+    bodyText2: const TextStyle(
       color: Colors.white,
     ),
-    bodyText2: TextStyle(
+    button: const TextStyle(
       color: Colors.white,
     ),
-    button: TextStyle(
+    headline1: const TextStyle(
       color: Colors.white,
     ),
-    headline1: TextStyle(
+    headline2: TextStyle(color: Colors.white, fontFamily: font),
+    headline3: const TextStyle(
       color: Colors.white,
     ),
-    headline2: TextStyle(
+    headline4: const TextStyle(
       color: Colors.white,
     ),
-    headline3: TextStyle(
+    headline5: const TextStyle(
       color: Colors.white,
     ),
-    headline4: TextStyle(
+    headline6: const TextStyle(
       color: Colors.white,
     ),
-    headline5: TextStyle(
+    subtitle1: const TextStyle(
       color: Colors.white,
     ),
-    headline6: TextStyle(
+    subtitle2: const TextStyle(
       color: Colors.white,
     ),
-    subtitle1: TextStyle(
+    overline: const TextStyle(
       color: Colors.white,
     ),
-    subtitle2: TextStyle(
-      color: Colors.white,
-    ),
-    overline: TextStyle(
-      color: Colors.white,
-    ),
-    caption: TextStyle(
+    caption: const TextStyle(
       color: Colors.white,
     ),
   ),
 );
-
