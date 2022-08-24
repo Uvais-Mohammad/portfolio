@@ -7,8 +7,15 @@ class HomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: const [
-        HomeBodyHeader(),
+      children: [
+        const HomeBodyHeader(),
+        Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: Center(
+            child: Text("To be continued...",
+                style: Theme.of(context).textTheme.headline6),
+          ),
+        ),
         // HomeBodyContent(),
         // HomeBodyFooter(),
       ],

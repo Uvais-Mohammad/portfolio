@@ -4,11 +4,13 @@ import 'package:my_portfolio/constants/constants.dart';
 final ThemeData lightTheme = ThemeData.light().copyWith(
   primaryColor: Colors.white,
   scaffoldBackgroundColor: Colors.white,
-  appBarTheme: const AppBarTheme(iconTheme: IconThemeData(color: Colors.black)),
+  appBarTheme: AppBarTheme(
+    iconTheme: const IconThemeData(color: Colors.black),
+    titleTextStyle:
+        TextStyle(color: Colors.black, fontFamily: font, fontSize: 20),
+  ),
   textTheme: TextTheme(
-    bodyText1: const TextStyle(
-      color: Colors.black,
-    ),
+    bodyText1: TextStyle(color: Colors.black, fontFamily: font),
     bodyText2: const TextStyle(
       color: Colors.black,
     ),
@@ -28,9 +30,7 @@ final ThemeData lightTheme = ThemeData.light().copyWith(
     headline5: const TextStyle(
       color: Colors.black,
     ),
-    headline6: const TextStyle(
-      color: Colors.black,
-    ),
+    headline6: TextStyle(color: Colors.black, fontFamily: font),
     subtitle1: const TextStyle(
       color: Colors.black,
     ),
@@ -51,6 +51,11 @@ final darkTheme = ThemeData.dark().copyWith(
   scaffoldBackgroundColor: darkBackGroundColor,
   cardColor: Colors.black,
   listTileTheme: const ListTileThemeData(),
+  appBarTheme: AppBarTheme(
+    iconTheme: const IconThemeData(color: Colors.white),
+    titleTextStyle:
+        TextStyle(color: Colors.white, fontFamily: font, fontSize: 20),
+  ),
   textTheme: TextTheme(
     bodyText1: TextStyle(color: Colors.white, fontFamily: font),
     bodyText2: const TextStyle(
@@ -60,23 +65,21 @@ final darkTheme = ThemeData.dark().copyWith(
       color: Colors.white,
     ),
     headline1: const TextStyle(
-      color: Colors.white,
+      color: Colors.blue,
     ),
     headline2: TextStyle(color: Colors.white, fontFamily: font),
     headline3: const TextStyle(
-      color: Colors.white,
+      color: Colors.blue,
     ),
     headline4: const TextStyle(
-      color: Colors.white,
+      color: Colors.blue,
     ),
     headline5: const TextStyle(
-      color: Colors.white,
+      color: Colors.blue,
     ),
-    headline6: const TextStyle(
-      color: Colors.white,
-    ),
+    headline6: TextStyle(color: Colors.white, fontFamily: font),
     subtitle1: const TextStyle(
-      color: Colors.white,
+      color: Colors.blue,
     ),
     subtitle2: const TextStyle(
       color: Colors.white,

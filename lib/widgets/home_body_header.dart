@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/utilities/responsive.dart';
 
@@ -12,18 +13,33 @@ class HomeBodyHeader extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const FlutterLogo(
-                  size: 300,
+                Image.asset(
+                  'assets/images/my_image2.png',
+                  height: 400,
+                  width: 400,
                 ),
                 Text(
                   'Hello I\'m a',
                   style: Theme.of(context).textTheme.headline2,
                 ),
-                Text(
-                  'Flutter Developer',
-                  style: Theme.of(context).textTheme.headline2!.copyWith(
-                        fontWeight: FontWeight.bold,
-                      ),
+                AnimatedTextKit(
+                  repeatForever: true,
+                  animatedTexts: [
+                    TyperAnimatedText(
+                      'Flutter Developer',
+                      textStyle:
+                          Theme.of(context).textTheme.headline2!.copyWith(
+                                fontWeight: FontWeight.bold,
+                              ),
+                    ),
+                    TyperAnimatedText(
+                      'Software Engineer',
+                      textStyle:
+                          Theme.of(context).textTheme.headline2!.copyWith(
+                                fontWeight: FontWeight.bold,
+                              ),
+                    ),
+                  ],
                 ),
                 Text(
                   'Uvais Mohammad',
@@ -36,9 +52,11 @@ class HomeBodyHeader extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
-                const Expanded(
-                  child: FlutterLogo(
-                    size: 300,
+                Expanded(
+                  child: Image.asset(
+                    'assets/images/my_image2.png',
+                    height: 400,
+                    width: 400,
                   ),
                 ),
                 Expanded(
@@ -49,11 +67,24 @@ class HomeBodyHeader extends StatelessWidget {
                         'Hello I\'m a',
                         style: Theme.of(context).textTheme.headline2,
                       ),
-                      Text(
-                        'Flutter Developer',
-                        style: Theme.of(context).textTheme.headline2!.copyWith(
-                              fontWeight: FontWeight.bold,
-                            ),
+                      AnimatedTextKit(
+                        repeatForever: true,
+                        animatedTexts: [
+                          TyperAnimatedText(
+                            'Flutter Developer',
+                            textStyle:
+                                Theme.of(context).textTheme.headline2!.copyWith(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                          ),
+                          TyperAnimatedText(
+                            'Software Engineer',
+                            textStyle:
+                                Theme.of(context).textTheme.headline2!.copyWith(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                          ),
+                        ],
                       ),
                       Text(
                         'Uvais Mohammad',

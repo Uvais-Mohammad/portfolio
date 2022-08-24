@@ -44,13 +44,6 @@ class _HomeScreenState extends State<HomeScreen>
                 : []),
         centerTitle: true,
         actions: [
-          // Switch(
-          //   value: themeProvider.themeType == ThemeType.light,
-          //   onChanged: (bool value) {
-          //     themeProvider.themeType =
-          //         value ? ThemeType.light : ThemeType.dark;
-          //   },
-          // ),
           IconButton(
             icon: AnimatedSwitcher(
                 duration: const Duration(milliseconds: 300),
