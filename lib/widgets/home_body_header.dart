@@ -20,7 +20,9 @@ class HomeBodyHeader extends StatelessWidget {
                 ),
                 Text(
                   'Hello I\'m a',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: Theme.of(context).textTheme.headline2!.copyWith(
+                        fontSize: 45,
+                      ),
                 ),
                 AnimatedTextKit(
                   repeatForever: true,
@@ -30,6 +32,7 @@ class HomeBodyHeader extends StatelessWidget {
                       textStyle:
                           Theme.of(context).textTheme.headline2!.copyWith(
                                 fontWeight: FontWeight.bold,
+                                fontSize: 45,
                               ),
                     ),
                     TyperAnimatedText(
@@ -37,13 +40,16 @@ class HomeBodyHeader extends StatelessWidget {
                       textStyle:
                           Theme.of(context).textTheme.headline2!.copyWith(
                                 fontWeight: FontWeight.bold,
+                                fontSize: 45,
                               ),
                     ),
                   ],
                 ),
                 Text(
                   'Uvais Mohammad',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: Theme.of(context).textTheme.headline2!.copyWith(
+                        fontSize: 45,
+                      ),
                 ),
               ],
             ),

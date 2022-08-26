@@ -21,15 +21,9 @@ final ThemeData lightTheme = ThemeData.light().copyWith(
       color: Colors.black,
     ),
     headline2: TextStyle(color: Colors.black, fontFamily: font),
-    headline3: const TextStyle(
-      color: Colors.black,
-    ),
-    headline4: const TextStyle(
-      color: Colors.black,
-    ),
-    headline5: const TextStyle(
-      color: Colors.black,
-    ),
+    headline3: TextStyle(color: Colors.black, fontFamily: font),
+    headline4: TextStyle(color: Colors.black, fontFamily: font),
+    headline5: TextStyle(color: Colors.black, fontFamily: font),
     headline6: TextStyle(color: Colors.black, fontFamily: font),
     subtitle1: const TextStyle(
       color: Colors.black,
@@ -68,15 +62,9 @@ final darkTheme = ThemeData.dark().copyWith(
       color: Colors.blue,
     ),
     headline2: TextStyle(color: Colors.white, fontFamily: font),
-    headline3: const TextStyle(
-      color: Colors.blue,
-    ),
-    headline4: const TextStyle(
-      color: Colors.blue,
-    ),
-    headline5: const TextStyle(
-      color: Colors.blue,
-    ),
+    headline3: TextStyle(color: Colors.white, fontFamily: font),
+    headline4: TextStyle(color: Colors.white, fontFamily: font),
+    headline5: TextStyle(color: Colors.white, fontFamily: font),
     headline6: TextStyle(color: Colors.white, fontFamily: font),
     subtitle1: const TextStyle(
       color: Colors.blue,
