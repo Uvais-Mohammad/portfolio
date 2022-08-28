@@ -16,87 +16,118 @@ class HomeBodyHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Responsive.isSmallScreen(context) ||
             Responsive.isMediumScreen(context)
-        ? Padding(
-            padding: const EdgeInsets.all(8.0),
+        ? const MobileView()
+        : const LargeView();
+  }
+}
+
+class LargeView extends StatelessWidget {
+  const LargeView({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          const Expanded(child: MyImage()),
+          const SizedBox(width: 30),
+          Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const MyImage(),
-                const Salutation(fontSize: 45),
+                const Salutation(),
                 const MyDesignation(),
-                const MyName(fontSize: 45),
+                const MyName(),
                 const SizedBox(height: 30),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    PrimaryButton(
-                      'Hire Me',
-                      primary: lightBackGroundColor,
-                      onPressed: () {},
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    PrimaryButton(
-                      'Download CV',
-                      icon: Icons.download,
-                      onPressed: () {},
-                    ),
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    HireMe(),
+                    SizedBox(width: 10),
+                    DownloadCv(),
                   ],
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
                 const WhatsappButton(),
               ],
             ),
-          )
-        : Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                const Expanded(child: MyImage()),
-                const SizedBox(width: 30),
-                Expanded(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Salutation(fontSize: 45),
-                      const MyDesignation(fontSize: 45),
-                      const MyName(),
-                      const SizedBox(height: 30),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          PrimaryButton(
-                            'Hire Me',
-                            primary: lightBackGroundColor,
-                            onPressed: () {},
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          PrimaryButton(
-                            'Download CV',
-                            icon: Icons.download,
-                            onPressed: () {
-                              launchUrl(Uri.parse(
-                                  'https://drive.google.com/file/d/1QI_QSHZZEukAKPr6HR3W9T3JFc09-wFN/view?usp=sharing'));
-                            },
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 20),
-                      const WhatsappButton(),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          );
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class MobileView extends StatelessWidget {
+  const MobileView({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const MyImage(),
+          const Salutation(fontSize: 45),
+          const MyDesignation(fontSize: 45,),
+          const MyName(fontSize: 45),
+          const SizedBox(height: 30),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              HireMe(),
+              SizedBox(width: 10),
+              DownloadCv(),
+            ],
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const WhatsappButton(),
+        ],
+      ),
+    );
+  }
+}
+
+class DownloadCv extends StatelessWidget {
+  const DownloadCv({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PrimaryButton(
+      'Download CV',
+      icon: Icons.download,
+      onPressed: () {
+        launchUrl(Uri.parse(resumeUrl));
+      },
+    );
+  }
+}
+
+class HireMe extends StatelessWidget {
+  const HireMe({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PrimaryButton(
+      'Hire Me',
+      primary: lightBackGroundColor,
+      onPressed: () {},
+    );
   }
 }
