@@ -3,7 +3,7 @@ import 'package:my_portfolio/constants/constants.dart';
 
 final ThemeData lightTheme = ThemeData.light().copyWith(
   primaryColor: Colors.white,
-  scaffoldBackgroundColor: Colors.white,
+  scaffoldBackgroundColor: floralWhite,
   appBarTheme: AppBarTheme(
     iconTheme: const IconThemeData(color: Colors.black),
     titleTextStyle:
@@ -36,6 +36,26 @@ final ThemeData lightTheme = ThemeData.light().copyWith(
     ),
     caption: const TextStyle(
       color: Colors.black,
+    ),
+  ),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ButtonStyle(
+      backgroundColor: MaterialStateProperty.all(lightWhite),
+      shape: MaterialStateProperty.all(
+        RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(3),
+        ),
+      ),
+      padding: MaterialStateProperty.all(
+        const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      ),
+      textStyle: MaterialStateProperty.all(
+        TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          fontFamily: font,
+        ),
+      ),
     ),
   ),
 );

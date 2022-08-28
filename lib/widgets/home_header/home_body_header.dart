@@ -1,10 +1,13 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/constants/constants.dart';
 import 'package:my_portfolio/utilities/responsive.dart';
+import 'package:my_portfolio/widgets/home_header/my_designation.dart';
 import 'package:my_portfolio/widgets/home_header/my_image.dart';
 import 'package:my_portfolio/widgets/home_header/my_name.dart';
+import 'package:my_portfolio/widgets/home_header/primary_button.dart';
 import 'package:my_portfolio/widgets/home_header/salutation.dart';
+import 'package:my_portfolio/widgets/home_header/whatsapp_button.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeBodyHeader extends StatelessWidget {
   const HomeBodyHeader({Key? key}) : super(key: key);
@@ -21,78 +24,31 @@ class HomeBodyHeader extends StatelessWidget {
               children: [
                 const MyImage(),
                 const Salutation(fontSize: 45),
-                AnimatedTextKit(
-                  repeatForever: true,
-                  animatedTexts: [
-                    TyperAnimatedText(
-                      'Flutter Developer',
-                      textStyle:
-                          Theme.of(context).textTheme.headline2!.copyWith(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 45,
-                              ),
-                    ),
-                    TyperAnimatedText(
-                      'Software Engineer',
-                      textStyle:
-                          Theme.of(context).textTheme.headline2!.copyWith(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 45,
-                              ),
-                    ),
-                  ],
-                ),
+                const MyDesignation(),
                 const MyName(fontSize: 45),
-                const SizedBox(
-                  height: 30,
-                ),
+                const SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ElevatedButton(
+                    PrimaryButton(
+                      'Hire Me',
+                      primary: lightBackGroundColor,
                       onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        primary: lightBackGroundColor,
-                      ),
-                      child: Row(
-                        children: const [
-                          Text('Hire Me'),
-                          SizedBox(width: 20),
-                          Icon(Icons.arrow_forward),
-                        ],
-                      ),
                     ),
                     const SizedBox(
                       width: 10,
                     ),
-                    ElevatedButton(
+                    PrimaryButton(
+                      'Download CV',
+                      icon: Icons.download,
                       onPressed: () {},
-                      child: Row(
-                        children: const [
-                          Text('Download CV'),
-                          SizedBox(width: 20),
-                          Icon(Icons.download_outlined),
-                        ],
-                      ),
                     ),
                   ],
                 ),
                 const SizedBox(
                   height: 20,
                 ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: const [
-                      Icon(Icons.whatsapp_outlined),
-                      SizedBox(width: 30),
-                      Text('Get in touch by whatsapp'),
-                      SizedBox(width: 30),
-                      Icon(Icons.arrow_forward),
-                    ],
-                  ),
-                ),
+                const WhatsappButton(),
               ],
             ),
           )
@@ -101,89 +57,41 @@ class HomeBodyHeader extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                const Expanded(
-                  child: MyImage(),
-                ),
-                const SizedBox(
-                  width: 30,
-                ),
+                const Expanded(child: MyImage()),
+                const SizedBox(width: 30),
                 Expanded(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Salutation(fontSize: 45),
-                      AnimatedTextKit(
-                        repeatForever: true,
-                        animatedTexts: [
-                          TyperAnimatedText(
-                            'Flutter Developer',
-                            textStyle:
-                                Theme.of(context).textTheme.headline2!.copyWith(
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                          ),
-                          TyperAnimatedText(
-                            'Software Engineer',
-                            textStyle:
-                                Theme.of(context).textTheme.headline2!.copyWith(
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                          ),
-                        ],
-                      ),
+                      const MyDesignation(fontSize: 45),
                       const MyName(),
-                      const SizedBox(
-                        height: 30,
-                      ),
+                      const SizedBox(height: 30),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          ElevatedButton(
+                          PrimaryButton(
+                            'Hire Me',
+                            primary: lightBackGroundColor,
                             onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              primary: lightBackGroundColor,
-                            ),
-                            child: Row(
-                              children: const [
-                                Text('Hire Me'),
-                                SizedBox(width: 20),
-                                Icon(Icons.arrow_forward),
-                              ],
-                            ),
                           ),
                           const SizedBox(
                             width: 10,
                           ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Row(
-                              children: const [
-                                Text('Download CV'),
-                                SizedBox(width: 20),
-                                Icon(Icons.download_outlined),
-                              ],
-                            ),
+                          PrimaryButton(
+                            'Download CV',
+                            icon: Icons.download,
+                            onPressed: () {
+                              launchUrl(Uri.parse(
+                                  'https://drive.google.com/file/d/1QI_QSHZZEukAKPr6HR3W9T3JFc09-wFN/view?usp=sharing'));
+                            },
                           ),
                         ],
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: const [
-                            Icon(Icons.whatsapp_outlined),
-                            SizedBox(width: 30),
-                            Text('Get in touch by whatsapp'),
-                            SizedBox(width: 30),
-                            Icon(Icons.arrow_forward),
-                          ],
-                        ),
-                      ),
+                      const SizedBox(height: 20),
+                      const WhatsappButton(),
                     ],
                   ),
                 ),

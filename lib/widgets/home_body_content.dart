@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/widgets/animated_text.dart';
 
 class HomeBodyContent extends StatelessWidget {
   const HomeBodyContent({Key? key}) : super(key: key);
@@ -10,7 +9,7 @@ class HomeBodyContent extends StatelessWidget {
       padding: const EdgeInsets.all(36.0),
       child: Column(
         children: const [
-          AnimatedText(text: 'About Me'),
+          // AnimatedText(text: 'About Me'),
         ],
       ),
     );
