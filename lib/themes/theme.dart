@@ -79,4 +79,24 @@ final darkTheme = ThemeData.dark().copyWith(
       color: Colors.white,
     ),
   ),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ButtonStyle(
+      backgroundColor: MaterialStateProperty.all(lightWhite),
+      shape: MaterialStateProperty.all(
+        RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(3),
+        ),
+      ),
+      padding: MaterialStateProperty.all(
+        const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      ),
+      textStyle: MaterialStateProperty.all(
+        TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          fontFamily: font,
+        ),
+      ),
+    ),
+  ),
 );

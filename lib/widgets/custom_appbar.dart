@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/utilities/responsive.dart';
 import 'package:my_portfolio/widgets/theme_button.dart';
@@ -34,5 +33,5 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => throw UnimplementedError();
+  Size get preferredSize => const Size.fromHeight(50);
 }

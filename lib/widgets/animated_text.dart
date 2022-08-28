@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 
 class AnimatedText extends StatefulWidget {
   final int? delay;
+  final String text;
   const AnimatedText({
     Key? key,
+    required this.text,
     this.delay = 0,
   }) : super(key: key);
 
@@ -50,7 +52,7 @@ class _AnimatedTextState extends State<AnimatedText>
       child: SlideTransition(
         position: animOffset,
         child: Text(
-          'About Me',
+          widget.text,
           style: Theme.of(context).textTheme.headline4!,
         ),
       ),

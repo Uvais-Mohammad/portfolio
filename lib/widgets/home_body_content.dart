@@ -10,7 +10,7 @@ class HomeBodyContent extends StatelessWidget {
       padding: const EdgeInsets.all(36.0),
       child: Column(
         children: const [
-          AnimatedText(),
+          AnimatedText(text: 'About Me'),
         ],
       ),
     );
