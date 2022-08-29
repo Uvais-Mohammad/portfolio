@@ -10,7 +10,7 @@ class HomeBody extends StatelessWidget {
     return ListView(
       children: const [
         HomeBodyHeader(),
-        HomeBodyContent(),
+        AboutMe(),
       ],
     );
   }

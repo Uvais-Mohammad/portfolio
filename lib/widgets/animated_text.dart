@@ -5,9 +5,11 @@ import 'package:flutter/material.dart';
 class AnimatedText extends StatefulWidget {
   final int? delay;
   final String text;
+  final TextStyle? style;
   const AnimatedText({
     Key? key,
     required this.text,
+    this.style,
     this.delay = 0,
   }) : super(key: key);
 
@@ -53,7 +55,7 @@ class _AnimatedTextState extends State<AnimatedText>
         position: animOffset,
         child: Text(
           widget.text,
-          style: Theme.of(context).textTheme.headline4!,
+          style: widget.style,
         ),
       ),
     );
