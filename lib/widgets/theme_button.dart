@@ -13,8 +13,6 @@ class ThemeButton extends StatefulWidget {
 
 class _ThemeButtonState extends State<ThemeButton>
     with SingleTickerProviderStateMixin {
-  
-
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
@@ -39,6 +37,9 @@ class _ThemeButtonState extends State<ThemeButton>
             ? themeProvider.themeType = ThemeType.dark
             : themeProvider.themeType = ThemeType.light;
       },
+      tooltip: themeProvider.themeType == ThemeType.light
+          ? 'Switch to Dark Mode'
+          : 'Switch to Light Mode',
     );
   }
 }

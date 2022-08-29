@@ -58,6 +58,17 @@ final ThemeData lightTheme = ThemeData.light().copyWith(
       ),
     ),
   ),
+  tooltipTheme: TooltipThemeData(
+    padding: const EdgeInsets.all(10),
+    decoration: BoxDecoration(
+      color: lightBackGroundColor.withOpacity(0.8),
+      borderRadius: BorderRadius.circular(3),
+    ),
+    textStyle: TextStyle(
+      color: Colors.white,
+      fontFamily: font,
+    ),
+  ),
 );
 
 final darkTheme = ThemeData.dark().copyWith(
@@ -117,6 +128,17 @@ final darkTheme = ThemeData.dark().copyWith(
           fontFamily: font,
         ),
       ),
+    ),
+  ),
+  tooltipTheme: TooltipThemeData(
+    padding: const EdgeInsets.all(10),
+    decoration: BoxDecoration(
+      color: Colors.black,
+      borderRadius: BorderRadius.circular(3),
+    ),
+    textStyle: TextStyle(
+      color: Colors.white,
+      fontFamily: font,
     ),
   ),
 );
