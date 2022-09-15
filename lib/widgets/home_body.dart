@@ -11,6 +11,7 @@ class HomeBody extends StatelessWidget {
       children: const [
         HomeBodyHeader(),
         AboutMe(),
+        
       ],
     );
   }
