@@ -28,33 +28,33 @@ class LargeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
+    return const Padding(
+      padding: EdgeInsets.all(8.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          const Expanded(child: MyImage()),
-          const SizedBox(width: 30),
+          Expanded(child: MyImage()),
+          SizedBox(width: 30),
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Salutation(),
-                const MyDesignation(),
-                const MyName(),
-                const SizedBox(height: 30),
+                Salutation(),
+                MyDesignation(),
+                MyName(),
+                SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     HireMe(),
                     SizedBox(width: 10),
                     DownloadCv(),
                   ],
                 ),
-                const SizedBox(height: 20),
-                const WhatsappButton(),
+                SizedBox(height: 20),
+                WhatsappButton(),
               ],
             ),
           ),
@@ -71,29 +71,31 @@ class MobileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
+    return const Padding(
+      padding: EdgeInsets.all(8.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const MyImage(),
-          const Salutation(fontSize: 45),
-          const MyDesignation(fontSize: 45,),
-          const MyName(fontSize: 45),
-          const SizedBox(height: 30),
+          MyImage(),
+          Salutation(fontSize: 45),
+          MyDesignation(
+            fontSize: 45,
+          ),
+          MyName(fontSize: 45),
+          SizedBox(height: 30),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               HireMe(),
               SizedBox(width: 10),
               DownloadCv(),
             ],
           ),
-          const SizedBox(
+          SizedBox(
             height: 20,
           ),
-          const WhatsappButton(),
+          WhatsappButton(),
         ],
       ),
     );

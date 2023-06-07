@@ -12,10 +12,10 @@ class WhatsappButton extends StatelessWidget {
       onPressed: () {
         launchUrl(Uri.parse('https://wa.me/919895057063'));
       },
-      child: Row(
+      child: const Row(
         mainAxisSize: MainAxisSize.min,
-        children: const [
-          Icon(Icons.whatsapp_outlined),
+        children: [
+          Icon(Icons.chat),
           SizedBox(width: 30),
           Text('Get in touch by whatsapp'),
           SizedBox(width: 30),
